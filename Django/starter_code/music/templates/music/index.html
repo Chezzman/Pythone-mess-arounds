@@ -1,0 +1,10 @@
+{% if all_muscicians %}
+  <h3>List of Muscicians:</h3>
+  <ul>
+    {% for muscician in all_muscicians %}
+    <li><a href="/music/{{ muscician.id }}/">{{ muscician.first_name }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <h3>You have no muscicians saved!</h3>
+{% endif %}

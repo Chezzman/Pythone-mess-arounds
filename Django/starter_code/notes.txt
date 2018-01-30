@@ -1,0 +1,31 @@
+~PROMPT COMMANDS
+
+python manage.py runserver ------ starts the built in server for django, not to use with full applications
+python manage.py startapp app_name ------- create a new app within the djangoproject
+python manage.py migrate ------- integrates the database with the server, by looking at installed_apps in settings.
+pyhton manage.py makemigrations app_name ------- goes to installed apps then models to define database
+python manage.py sqlmigrate app_name 0001 ------ shoes the models in sql information
+python manage.py createsuperuser  ----- making an admin(using winpty in inferior shells)
+python manage.py shell ------ allows you to use the django api shell
+
+makemigrations - then migrate
+
+
+
+~DATA BASE COMMANDS ~~ Adding basic data
+In Django shell import models to use
+>>> from music.models import Muscician, Album, Song
+adding data to specific model
+>>> a = Muscician(first_name="Shania", Last_name="Twain", artist_age="52")
+this can also be done as
+>>> a = Muscician()
+>>> a.artist_name = "Justin"
+.....
+after either way is done, save a to the data base
+>>> a.save()
+to  view model data so far
+>>> Muscician.objects.all()
+to filter certain objects in the databases
+>>> Muscician.objects.filter(id=1)
+or
+>>> Muscician.objects.filter(first_name__startswith='Shania')

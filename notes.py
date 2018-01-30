@@ -567,3 +567,54 @@ else:
     print("Sorry I did not reconize that operator: {operator}".format(operator=op))
     sys.exit()
 print("{line_expr} = {value:.2f}".format(line_expr=line, value=val))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WHILE AND FOR LOOP 5.1
+
+s = "hello world"
+a = [3, 6, 9]
+
+print( 5 in a )
+print( 4 in a )
+print( "ello" in s )
+
+
+for even_number in [2, 4, 6, 8, 10]:
+    print(even_number)
+    # add more code here..
+
+odds = [1,3,5,7,9,11]
+
+for odd_number in odds:
+    print(odd_number)
+
+print(range(len(odds)))
+for index in range(len(odds)):
+    print("index: {:d}, odd number: {:d}".format(index, odds[index]))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+index = 0
+names= ["Josh", "Harry", "Leah", "Micah" ]
+
+while index < len(names):
+    name =names[index]
+    print(name)
+    index = index + 1
+
+total = 0
+v = 1
+
+while v <= 10:
+    total = total + v
+    v = v + 1
+    print(total)
+
+    #never ending while loop untill the condition have been METHODSprint("Make the sum of a + b equal 20")
+while True:
+
+    a, b = int(input("a: ")), int(input("b: "))
+    if a + b == 20:
+        print("Stopping loop")
+        break
+    else:
+         print("thats not 20")
